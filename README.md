@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".github/logo.svg">
+  <img src="/logo.svg">
   <p>Projeto desenvolvido com o intuito de apoiar ONGs. <strong>Be the hero!</strong><p>
 </div>
 
@@ -7,10 +7,10 @@
 
 ## 💡 Projeto
 
-O projeto propõe o auxílio a organizações não governamentais em suas campanhas financeiras.
-Você pode cadastrar sua ONG e seu(s) caso(s) e obter contato dos apoiadores.
+O projeto desenvolvido afim de propor novas fontes de auxílio a organizações não governamentais em suas campanhas.
+Você pode cadastrar sua ONG e seu(s) caso(s) via plataforma <strong>web</strong> e obter contato dos apoiadores que acessam a plataforma via aplicativo <strong>mobile</strong>.
 
-## 🛠 Ferramentas
+## 🛠 Tools
 
 - [Node.js](https://nodejs.org/en/docs/)
 - [React](https://reactjs.org/)
@@ -20,14 +20,6 @@ Você pode cadastrar sua ONG e seu(s) caso(s) e obter contato dos apoiadores.
 - [Knex](http://knexjs.org/)
 - [Jest](https://jestjs.io/)
 - [Styled Components](https://styled-components.com/)
-
-## 💻 Demo
-
-[https://be-thehero.netlify.com/](https://be-thehero.netlify.com/)
-
-### 📱 App
-
-[Download para Android](https://github.com/jeferson-sb/be-the-hero/releases/tag/1.0.0)
 
 ## 🚀 Quick start
 

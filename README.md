@@ -5,7 +5,7 @@
 
 ![alt Mockup frontend](mockup.png)
 
-## 💡 Projeto
+## 💻 Project
 
 O projeto desenvolvido afim de propor novas fontes de auxílio a organizações não governamentais em suas campanhas.
 Você pode cadastrar sua ONG e seu(s) caso(s) via plataforma <strong>web</strong> e obter contato dos apoiadores que acessam a plataforma via aplicativo <strong>mobile</strong>.
@@ -21,7 +21,7 @@ Você pode cadastrar sua ONG e seu(s) caso(s) via plataforma <strong>web</strong
 - [Jest](https://jestjs.io/)
 - [Styled Components](https://styled-components.com/)
 
-## 🚀 Quick start
+## 🚀 Start
 
 ### Instalação
 

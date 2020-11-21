@@ -1,13 +1,36 @@
 const express = require('express')
 const  {celebrate, Segments, Joi} = require('celebrate')
-const routes = express.Router(); // Desacoplamento de rotas do express na var routes
 
+// Desacoplamento de rotas do express na var routes
+const routes = express.Router(); 
+
+// Export Page Files - All Controllers 
 const OngController = require('./controllers/OngController')
 const IncidentController = require('./controllers/IncidentController')
 const ProfileController = require('./controllers/ProfileController')
-const SessionController = require('./controllers/SessionController')
+const SessionController = require('./controllers/SessionController');
+const { request } = require('express');
 
-routes.post('/sessions', SessionController.create);
+// Test route
+
+routes.post('/users', (request, response) => {
+    
+    const body = request.body;
+
+    console.log(body);
+    return response.json({
+        evento: 'Suruba',
+        aluno: 'Fernando'
+    });
+});
+
+
+module.exports = routes; // Exportar var usando node 
+
+
+// Below we have example routes, will be deleted!
+
+/*routes.post('/sessions', SessionController.create);
 
 routes.get('/ongs', OngController.index);
 
@@ -39,7 +62,4 @@ routes.delete('/incidents/:id', celebrate({
      [Segments.PARAMS]: Joi.object().keys({
          id: Joi.number().required()
      })
-}), IncidentController.delete);
-
-
-module.exports = routes; // Exportar var usando node 
+}), IncidentController.delete);*/

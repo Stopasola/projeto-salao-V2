@@ -1,28 +1,17 @@
 const express = require('express')
-const  {celebrate, Segments, Joi} = require('celebrate')
+//const  {celebrate, Segments, Joi} = require('celebrate')
 
 // Desacoplamento de rotas do express na var routes
 const routes = express.Router(); 
 
 // Export Page Files - All Controllers 
-const OngController = require('./controllers/OngController')
-const IncidentController = require('./controllers/IncidentController')
-const ProfileController = require('./controllers/ProfileController')
-const SessionController = require('./controllers/SessionController');
-const { request } = require('express');
+const CLientController = require('./controllers/ClientController')
 
-// Test route
 
-routes.post('/users', (request, response) => {
-    
-    const body = request.body;
+// Client Routes
 
-    console.log(body);
-    return response.json({
-        evento: 'Suruba',
-        aluno: 'Fernando'
-    });
-});
+routes.post('/client', CLientController.create);
+routes.get('/client', CLientController.index);
 
 
 module.exports = routes; // Exportar var usando node 
@@ -30,10 +19,7 @@ module.exports = routes; // Exportar var usando node
 
 // Below we have example routes, will be deleted!
 
-/*routes.post('/sessions', SessionController.create);
-
-routes.get('/ongs', OngController.index);
-
+/*
 routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),

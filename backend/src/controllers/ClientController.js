@@ -4,24 +4,28 @@ const generateUniqueId = require('../utils/generateUniqueId');
 
 module.exports = {
 
+    // List Clients
     async index(request, response){
         const ongs = await connection('ongs').select('*');
         return response.json(ongs)
     },
 
+    // Create Clients
     async create(request, response){
-        const {name, email, whatsapp, city, uf} = request.body;
+        const {name, cpf, phone, address, cep, email, birthdate, password} = request.body;
         
         const id = generateUniqueId();
-          
-         await connection('ongs').insert({
-            id,
+        console.log('jesus')
+         await connection('person').insert({
             name,
+            cpf,
+            phone,
+            address,
+            cep,
             email,
-            whatsapp,
-            city,
-            uf,
-         });
+            birthdate, 
+            password, 
+         }).;
         return response.json({id});
     }
 };
